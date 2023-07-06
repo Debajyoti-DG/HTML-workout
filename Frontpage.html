@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="this is a description">
+    <meta name="keywords" content="this is a description">
+    <meta name="robots" content="index,follow">
+    <title> HTML Frontpage document </title>
+    <style>
+        /* below is element selector */
+        p{
+            color: blue; 
+            background-color: blanchedalmond;
+            border: 2px solid blueviolet;
+            
+            /* CSSfontstack website provides good fonts */
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        /* Others overruled because of important tag above */
+        #redElement{
+            color: red;
+            /* background-color: blanchedalmond; */
+        }
+        .design{
+            color: green;
+        }
+        /* below is id selector */
+        #blacked{
+            color: black;
+        }
+        /* Below is class selector */
+        .bgSet{
+            background-color: aqua;
+        }
+        /* Grouping selector */
+        footer, span{
+            background-color: pink;
+            font-weight: bold;
+        }
+        #blueBlack{
+            color:coral;
+        }
+        /* #font{
+            font-size: 33px;
+            line-height: 2em;
+        } */
+        #firstPara{
+            color: crimson;
+        }
+        </style>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <h2> CSS Lesson begins here</h2>
+    <!-- CSS can be included in 3 types - inline CSS, Internal CSS and External CSS -->
+    <h3> CSS Selectors</h3>
+    <!-- This is element selector -->
+    <p> This is 1st simple paragraph to demonstrate CSS selectors</p>
+    <!-- This is id selector -->
+    <p id="redElement"> This is 2nd simple paragraph to demonstrate CSS selectors</p>
+    <div>
+        <!-- This is class selector -->
+        <p class="design"> This is 3rd simple paragraph to demonstrate CSS selectors</p>
+    </div>
+    <footer> This is footer </footer>
+    <span> This is span </span>
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    
+    <h3> Developer Tools</h3>
+    <!-- Do checkout yourself at the chrome inspect function -->
+    <p id="blueBlack">This is for Developer tools</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <h3> CSS Fonts </h3>
+    <!-- CSSfontstack website provides good fonts  -->
+    <p id="font"> This is CSS fonts with increased font size </p>
+    <p> This is another <span style="font-style: italic;">Font</span> exapmle</p>
+
+
+
+
+
+
+
+
+
+
+    <h3> Colors in CSS </h3>
+    <h4> This is first box </h4>
+    <p id="firstPara"> This is another paragraph from the first box</p>
+    <p id="secondPara"> This is another paragraph from the second box</p>
+    <p id="thirdPara"> This is another paragraph from the third box</p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2> HTML Lesson begins here</h2>
+
+    <h3> Lists </h3>
+    <ul type="circle">
+        <li>Content 1</li>
+        <li>Content 2</li>
+        <ul>
+            <li>content in middle 1</li>
+            <li>content in middle 2</li>
+        </ul>
+        <li>Content 3</li>
+    </ul>
+    <ol type="A">
+        <li>Content 1</li>
+        <li>Content 2</li>
+        <li>Content 3</li>
+    </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> Tables </h3>
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> ID </th>
+                <th> Details </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Saptarshi </td>
+                <td> adgfa121 </td>
+                <td> Full Stack Developer </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td> Chandril </td>
+                <td> adbma712 </td>
+                <td> Biotech </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td> Debajyoti </td>
+                <td> ada1257 </td>
+                <td> Full Stack Developer </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> Forms </h3>
+    <form action="backend.php">
+        <div>
+            <label for="name"> Name </label>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Roll: <input type="text" name="myRoll">
+        </div>
+        <br>
+        <div>
+            Email: <input type="text" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            <label for="eligible"> Are you eligible ? </label>
+            <input type="checkbox" name="myEligibilty" id="eligible">
+        </div>
+        <br>
+        <div>
+            Gender: <input type="radio" name="myGender"> Male
+            <input type="radio" name="myGender"> Female
+            <input type="radio" name="myGender"> Other
+        </div>
+        <br>
+        <div>
+            Write about yourself: <br>
+            <textarea name="myText" cols="90" rows="10" spellcheck="true"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="car"> Car : </label>
+            <select name="myCar" id="Car">
+                <option value="ind" selected> Indica </option>
+                <option value="swf"> Swift </option>
+                <option value="tsl"> Tesla </option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> Inline and block elements </h3>
+
+    <p> Paragraph 1 </p>
+    <p> paragraph 2 </p> <!-- paragraph is block element -->
+
+    <strong style="border: 2px solid red"> Paragraph 1 </strong>
+    <a style="border: 2px solid blue"> paragraph 2 </a> <!-- a is inline element -->
+
+    <span style="border: 2px solid red"> span 1 </span>
+    <span style="border: 2px solid blue"> span 2 </span> <!-- span is inline element -->
+
+
+
+
+
+
+
+
+
+
+    <h3> IDs and Classes </h3>
+    <div id="mainbox" class="redBg Blackborder">
+        This is mainbox
+    </div>
+    <span class="redBg"></span>
+
+    <!-- Emmet -->
+    <!-- . is for class and # is for ID -->
+    <span class="redbg"></span>
+    <span id="mainSpan"></span>
+    <div class="redbg blackborder anotherClass"></div>
+    <!-- Emmet takes div tag as default -->
+    <div class="blackBackground"></div>
+    <!-- creating multiple elements using Emmet -->
+    <!-- span.myclass.myclass2.myclass3*4 to create 4 similar elements using Emmet -->
+    <span class="myClass myClass2 myClass3">First</span>
+    <span class="myClass myClass2 myClass3">Second</span>
+    <span class="myClass myClass2 myClass3">Third</span>
+    <span class="myClass myClass2 myClass3">Fourth</span>
+
+
+
+
+
+
+
+
+
+
+    <h3> HTML Entities </h3>
+    <div class="container">
+        <p>This is a paragraph</p>
+    </div>
+    <div class="container">
+        <p>This is another &nbsp;&nbsp;&nbsp;&nbsp; paragraph</p>
+    </div>
+    <div class="container">
+        <p>This is another &nbsp;&nbsp;&nbsp;&nbsp; paragraph and is wrtiien like this
+            &lt; p &gt;</p>
+    </div>
+    <div class="container">
+        <!-- Search google and get nice entities and how to implement them -->
+        <p>Pound is wrtiien like this &pound;</p>
+        <p>Copyright is wrtiien like this &copy;</p>
+        <p>Nice arrow is wrtiien like this &rAarr;</p>
+    </div>
+
+
+
+
+
+
+
+    <!-- IMPORTANT -->
+    <h3> Semantic Elements</h3>
+    <!-- Search google and get to know semantic elements and how to implement them -->
+    <!-- examples include -- <header></header>
+                             <footer></footer>
+                             <nav></nav>
+                             etc.....                  -->
+    <p>This is to be searched in chrome</p>
+    <!-- an example of semantic tag  -->
+    <details>
+        <summary style="color: blue;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </summary>
+
+        <br>
+        Unde ab voluptates doloribus cumque autem repellendus, earum quaerat eius, dolorum
+        laboriosam dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nostrum 
+        earum ex reiciendis libero nisi accusamus! Beatae dolore tenetur laborum alias ex 
+        quidem. Atque cum libero corrupti! Asperiores cumque veniam, commodi cupiditate ratione 
+        consequuntur accusantium nulla possimus fugiat sapiente earum distinctio. 
+        Praesentium vitae vel magni blanditiis, fuga dolorum provident assumenda maiores ab 
+        deserunt temporibus? 
+        Eius cum qui nesciunt, quisquam quaerat, non sed exercitationem assumenda sunt, nisi 
+        laudantium maiores maxime officia aliquam dicta iure. 
+        Libero quaerat labore hic reiciendis, consequatur sit numquam expedita maxime modi nam 
+        voluptatibus magni. 
+        Necessitatibus, minima itaque recusandae cupiditate quasi, delectus natus quas facilis 
+        perferendis alias exercitationem?
+    </details>
+
+
+</body>
+
+</html>

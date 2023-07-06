@@ -1,0 +1,24 @@
+/* p{
+    color: blueviolet;
+    background-color: hotpink;
+} */
+#font{
+    font-size: 33px;
+    line-height: 2em;
+}
+#secondPara{
+    color: rgb(0, 0, 0); /* Colour by rgb value */
+    background-color: rgb(0, 255, 255) !important;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 30px;
+}
+#thirdPara{
+    /* doing it in hex colour */
+    color: #011c09;
+    background-color: rgb(227, 180, 241);
+    font-weight: bold;
+    font-family: fantasy;
+    line-height: 33px;
+}

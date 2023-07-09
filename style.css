@@ -2,19 +2,22 @@
     color: blueviolet;
     background-color: hotpink;
 } */
-#font{
+#font {
     font-size: 33px;
     line-height: 2em;
 }
-#secondPara{
-    color: rgb(0, 0, 0); /* Colour by rgb value */
+
+#secondPara {
+    color: rgb(0, 0, 0);
+    /* Colour by rgb value */
     background-color: rgb(0, 255, 255) !important;
     font-style: italic;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 30px;
 }
-#thirdPara{
+
+#thirdPara {
     /* doing it in hex colour */
     color: #011c09;
     background-color: rgb(227, 180, 241);
@@ -22,3 +25,110 @@
     font-family: fantasy;
     line-height: 33px;
 }
+
+#firstBorder {
+    background-color: lightblue;
+    height: 50px;
+    width: 500px;
+    /* border-width: 3px;
+    border-style: solid;
+    border-color: blueviolet; */
+    border: 3px solid blueviolet;
+    border-radius: 40px;
+    text-align: center;
+}
+
+#secondBorder {
+    color: rgb(15, 8, 80);
+    height: 50px;
+    width: 500px;
+    border-top: 2px solid bisque;
+    border-right: 2px solid rgb(151, 94, 25);
+    border-left: 2px solid rgb(63, 197, 74);
+    border-bottom: 2px solid rgb(48, 27, 1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+}
+
+#thirdBorder {
+    color: rgb(213, 212, 223);
+    height: 750px;
+    width: 550px;
+    border-radius: 30px;
+    text-align: center;
+    background-image: url('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat; /* repeat-x and repeat-y */
+    background-position: center center;
+    /* background-image: url('C:\Download by dm\Firefly sleeping bear in nightgown and nightcap 62456.jpg'); */
+
+    /* background-position: 20px 30px;
+    background-position: top center;
+    background-position: center top;
+    background-position: top top;
+    background-position: top left;
+    background-position: bottom left;
+    background-position: top right;
+    background-position: bottom right; */
+}
+.container{
+    background-color: burlywood;
+    border: 2px solid rgb(5, 33, 94);
+    /* padding: 79px; */
+    margin: 34px;
+    border-radius: 15px;
+    padding: 34px 34px 68px 34px; /* tp right bottom left padding */
+    width: 433px;
+    
+    /* Somethings that we can do using padding
+    
+    padding-top: 34px;
+    padding-left: 34px;
+    padding-bottom: 34px;
+    padding-right: 34px; */
+} 
+/* .container2{
+    width: 900px;
+    border: 3px solid purple;
+    margin: auto;
+}
+.item{
+    border: 3px solid maroon;
+    margin: 15px 10px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(239, 160, 160);
+
+}
+#fruitspara{
+    background-color: rgb(239, 160, 160);
+    border-color: rgb(239, 160, 160);
+    float: left;
+    width: 50%;
+}
+#computerspara{
+    background-color: rgb(239, 160, 160);
+    border-color: rgb(239, 160, 160);
+    float: left;
+    width: 50%;
+}
+#bedspara{
+    background-color: rgb(239, 160, 160);
+    border-color: rgb(239, 160, 160);
+    float: left;
+    width: 100%;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+

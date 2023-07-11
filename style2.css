@@ -211,5 +211,40 @@ h3 {
 
     position: sticky;
     top: 4px;
-
 } 
+
+.asdf{
+    border: 2px solid black;
+    height: 170px;
+    width: 170px;
+}
+
+#asdf1{
+    position: relative;
+    top: 70px;
+    z-index: 35; /*if z-index value is more it implies that in a stack it will be placed higher */
+    background-color: rgb(255, 234, 0);
+}
+#asdf2{
+    position: relative;
+    top: 14px;
+
+    z-index: 34;
+    /* z-index will only work for positions Absolute, Relative, Fixed and Sticky (not for deafult - static) */
+
+    /* visibility: hidden; */
+
+    /* Hidden visibility keeps the element in its place but makes it invisible*/
+
+    /* display: none; */
+
+    /* Display none means deleting the element (deletes the element and also its occupied space)*/
+
+    background-color: rgb(254, 3, 3);
+}
+#asdf3{
+    background-color: rgb(0, 220, 26);
+}
+#asdf4{
+    background-color: rgb(5, 9, 255);
+}

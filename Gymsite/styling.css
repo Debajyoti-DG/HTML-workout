@@ -2,7 +2,7 @@ body {
     margin: 45px;
     padding: 0px;
     font-family: 'Bangers', cursive;
-    background: url('Images\ and\ Videos/pexels-lukas-669580.jpg');
+    background: url('https://images.pexels.com/photos/669580/pexels-photo-669580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 
     /* IMPORTANT */
     background-size: cover;
@@ -13,7 +13,7 @@ body {
     display: inline-block;
     border: 3px solid red;
     position: absolute;
-    top: 24px;
+    top: 34px;
     left: 50px;
 }
 
@@ -107,7 +107,7 @@ body {
 
 
 
-.form-group input{
+.form-group input {
     border-radius: 5px;
     margin: 5px auto;
     text-align: center;
@@ -118,15 +118,16 @@ body {
     font-size: 21px;
     font-family: 'Bangers', cursive;
 }
-.container h1{
+
+.container h1 {
     text-align: center;
     display: block;
 }
 
-.container button{
+.container button {
     display: block;
     width: 115px;
     margin: 20px auto;
     padding: 6px;
     font-size: 25px;
-} 
+}

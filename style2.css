@@ -211,21 +211,23 @@ h3 {
 
     position: sticky;
     top: 4px;
-} 
+}
 
-.asdf{
+.asdf {
     border: 2px solid black;
     height: 170px;
     width: 170px;
 }
 
-#asdf1{
+#asdf1 {
     position: relative;
     top: 70px;
-    z-index: 35; /*if z-index value is more it implies that in a stack it will be placed higher */
+    z-index: 35;
+    /*if z-index value is more it implies that in a stack it will be placed higher */
     background-color: rgb(255, 234, 0);
 }
-#asdf2{
+
+#asdf2 {
     position: relative;
     top: 14px;
 
@@ -242,9 +244,99 @@ h3 {
 
     background-color: rgb(254, 3, 3);
 }
-#asdf3{
+
+#asdf3 {
     background-color: rgb(0, 220, 26);
 }
-#asdf4{
+
+#asdf4 {
     background-color: rgb(5, 9, 255);
+}
+
+.container7 {
+    border: 2px solid red;
+    height: 544px;
+
+    /* Initialize the container as a flex box  */
+    display: flex;
+
+    /* flex properties for flex container */
+
+    flex-direction: row;
+    /* (default value is row) */
+
+    /* flex-direction: column;
+    flex-direction: row-reverse; 
+    flex-direction: column-reverse; */
+
+    flex-wrap: wrap;
+    /* Wrap property solves the problem of wrapping , helpful for making responsive display (default no-wrap)*/
+    /* flex-wrap: wrap-reverse; */
+
+
+
+
+    /* Helps to set properties */
+    /* flex-flow: row-reverse wrap; /* Short hand operator */
+
+
+
+
+
+    /* JUSTIFY CONTENT PROVIDES SPACE HORIZONTALLY */
+
+    /*justify-content: center;   /* all contents are made in the middle */
+    /*justify-content: space-between;  /* |element__element__element|   Provides equal spaces BETWEEN each element in a container (no spaces between either sides and margin) */
+    justify-content: space-evenly;
+    /* |__element__element__element__|   Provides equal spaces on BOTH SIDES OF THE ELEMENTS which is equal to the Spaces on either side of the corner elements with the margin */
+    /*justify-content: space-around; /* |_element__element__element_|   Provides equal spaces on BOTH SIDES OF THE ELEMENTS */
+
+    /* ALIGN ITEMS WILL PROVIDE SPACE VERTICALLY */
+    /* align-items: center;           /* vertically centre elements*/
+    /* align-items: flex-end;
+       align-items: flex-start; /* (default) */
+    align-items: stretch;
+    /* Makes vertically equal spaces between elements */
+}
+
+.itemam {
+    background-color: tomato;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+#item-1 {
+    /*higher the order, later it is shown in the container */
+    /* order: 11; */
+
+    /* higher the flex grow value the faster it will expand on expanding the screen */
+    /* flex-grow: 2; */
+
+    /* higher the flex shrink value the faster it will shrink on shrink the screen  */
+    /* flex-shrink: 2; */
+}
+
+#item-2 {
+    /* order: 7; */
+    /* flex-grow: 10;
+
+    flex-shrink: 3; */
+
+    /*When flex-basis is set to row, it will control width*/
+    /*When flex-basis is set to column, it will control height*/
+    flex-basis: 1000px;
+}
+
+#item-3 {
+    /* order: 8; */
+
+    flex: 1 1 160px;
+    /* shorthand notation = flex grow..... flex shrink.... flex basis*/
+
+    /* align-self: center; */
+    align-self: flex-end;
+    /*align-self: flex-start; */
 }

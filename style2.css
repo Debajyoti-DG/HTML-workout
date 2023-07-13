@@ -327,16 +327,87 @@ h3 {
 
     /*When flex-basis is set to row, it will control width*/
     /*When flex-basis is set to column, it will control height*/
-    flex-basis: 1000px;
+    flex-basis: 300px;
 }
 
 #item-3 {
     /* order: 8; */
 
-    flex: 1 1 160px;
+    flex: 0 0 160px;
     /* shorthand notation = flex grow..... flex shrink.... flex basis*/
 
     /* align-self: center; */
     align-self: flex-end;
     /*align-self: flex-start; */
+}
+
+html {
+    font-size: 25px;
+}
+
+.container8 {
+    font-size: 10px;
+    text-align: center;
+    border: 2px solid red;
+    /* width: 400px; /*inconvenient method for responsive layouts of websites */
+    width: 98vw;
+    /* height: 804px; /* inconvenient method as above */
+    height: 100vh;
+    /* (vh stands for view port height )*/
+}
+
+#heading1 {
+    /* font-size: 3em;  /* makes the text three times its parent class = 3*10px = 30px */
+    /* padding: 3em; /* makes the padding three times its font size = 3 * (3*10px) = 90px */
+}
+
+#heading2 {
+    /* font-size: 3rem;  /* makes the text three times its parent class (here it is HTML = 3*25px = 75px */
+    /* padding: 3rem; /* makes the padding three times its parent class = 3 * 25px = 75px */
+}
+
+.boxer {
+    background-color: rgb(145, 255, 255);
+    text-align: center;
+    display: none;
+}
+
+@media only screen and (max-width:300px) {
+    #box_1 {
+        display: block;
+        background-color: rgb(155, 95, 210);
+    }
+}
+
+@media only screen and (max-width:500px) and (min-width: 300px) {
+    #box_2 {
+        display: block;
+        background-color: rgb(183, 66, 66);
+    }
+}
+
+@media only screen and (max-width:800px) and (min-width: 500px) {
+    #box_3 {
+        display: block;
+        background-color: rgb(57, 205, 67);
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #box_4 {
+        display: block;
+        background-color: rgb(183, 66, 66);
+    }
+}
+
+div>p {
+    /* this > means that only p tags which are the direct children of div will get affected */
+    background-color: yellow;
+    color: black;
+}
+
+div+p {
+    /* it means if certain div is followed by p tag, then only it is affected (p is next sibling than div)*/
+    background-color: aqua;
+    color: black;
 }

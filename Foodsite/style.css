@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#navbar{
+    display: flex;
+    align-items: center; 
+    position: relative;
+}
+
+/* Logo and list(navigation) */
+
+#logo img{
+    margin: 3px 27px;
+    padding: 10px 10px;
+    height: 50px;
+    width: 50px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    /* font-family: 'Tektur', cursive; */
+    /* font-family: 'Lugrasimo', cursive; */
+    font-family: 'DM Sans', sans-serif;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 12px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+
+/* Home section*/
+
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 210px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 350px;
+    /* font-family: 'Lugrasimo', cursive; */
+}
+#home::before{
+    content: "";
+    background: url('background.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.88;
+    z-index: -4;
+
+}
+
+/* Utility classes */
+.h-primary{
+    font-size: 3rem;
+    padding: 22px 40px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(197, 64, 64);
+    color: white;
+    border-radius: 10px;
+    /* margin: 17px 17px; */
+    font-size: 1.3rem;
+}
+.btn:hover{
+   background-color: brown;
+   cursor: pointer;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Lugrasimo', cursive;
+    margin-top: 11rem;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Lugrasimo', cursive;
+    font-weight: bold;
+    margin: 22px 187px;
+}
+
+/* 
+#home p{
+    margin: 21px auto;
+    padding: 7px 137px;
+    /* border: 2px solid red; 
+} */
+
+
+
+
+
+
+
+
+
+/* .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.item{
+    display: inline-block;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+}  */
+
+

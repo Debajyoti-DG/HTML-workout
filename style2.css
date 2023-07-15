@@ -3,6 +3,14 @@
     /*keeps the original width including margin and padding. Else margin padding change the width*/
 }
 
+:root{
+    /* using :root we can create variables that can be accessed all over the css file */
+    --red-color: red;
+    --blue-color: blue;
+    --margin: 2px;
+    --max-w: 350px;
+}
+
 .container2 {
     width: 900px;
     border: 3px solid purple;
@@ -533,6 +541,44 @@ header::before{
     display: flex;
 }
 .card{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     padding: 3px 23px;
+    margin: 23px 12px;
+    background-color: yellow;
+    /* box-shadow: 10px 13px rgb(30, 115, 143);  (offset-x offset-y)*/
+    box-shadow: -10px -13px 15px rgb(30, 115, 143);
+    box-shadow: -10px -13px 15px 4px rgba(30, 115, 143, 0.6);  /*syntax  = (offset-x .. offset-y .. blur-radius .. spread-readius .. color)  */
+    /* rgba color sequence is for red, green, blue, alpha ... where alpha decides the darkness of color*/
+
+    box-shadow: inset 3px 5px rgb(0, 107, 128); /* inset means shadow within the box not outside the box */
+}
+
+.card h2{
+    text-shadow: 10px 10px 5px rgb(234, 108, 108);
+}
+
+.container13{
+    --color: rgb(246, 166, 243); /* Variable declaration */
+    max-width: var(--max-w);
+    margin: auto;
+
+    /* we did margin auto here because we shortened the width of the container with the variable, so the contents of the container would have moved to the left if margin auto was not applied */
+
+    display: flex;
+    background-color: var(--color);
+    align-items: center;
+    justify-content: center;
+}
+
+.boxxx{
+    --color: blue; /* Variable declaration */
+
+    /*The scope of the variable is only within this .boxxx class */
+
+    background-color: var(--color); /* way to put variable in action */
+    width: 144px;
+    height: 144px;
+    margin: 10px 10px;
+    border: var(--margin) solid red;
+    box-shadow: 7px 6px 24px 3px var(--color);
 }

@@ -21,6 +21,8 @@
     content: "";
     background-color: black;
     position: absolute;
+    /* top: 0;
+    left: 0; */
     height: 100%;
     width: 100%;
     opacity: 0.4;
@@ -42,7 +44,7 @@
 #navbar ul li a{
     color: white;
     display: block;
-    padding: 3px 12px;
+    padding: 3px 15px;
     text-decoration: none;
     border-radius: 20px;
 }
@@ -71,28 +73,19 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    /* top: 0;
+    left: 0; */
     opacity: 0.88;
     z-index: -4;
 
 }
 
-/* Utility classes */
-.h-primary{
-    font-size: 3rem;
-    padding: 22px 40px;
-}
-.btn{
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color: rgb(197, 64, 64);
-    color: white;
-    border-radius: 10px;
-    /* margin: 17px 17px; */
-    font-size: 1.3rem;
-}
+
+
+
 .btn:hover{
-   background-color: brown;
-   cursor: pointer;
+    background-color: brown;
+    cursor: pointer;
 }
 
 #home h1{
@@ -110,6 +103,13 @@
     margin: 22px 187px;
 }
 
+/* #home p::before{
+    content: "";
+    background-color: black;
+    opacity: 0.9;
+    z-index: 1;
+} */
+
 /* 
 #home p{
     margin: 21px auto;
@@ -118,26 +118,51 @@
 } */
 
 
-
-
-
-
-
-
-
-/* .container{
+/* Services section*/
+#services{
+    margin: 34px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+}
+#services .box{
+    border: 2px solid rgb(248, 114, 114);
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background: rgb(244, 235, 235);
+}
+#services .box img{
+    height: 100px;
+    margin: auto;
+    display: block;
+}
+#services{
+    
+}
+#abcd{
+    margin-top: 357px;
 }
 
-.item{
-    display: inline-block;
+
+/* Utility classes */
+.h-primary{
+    font-size: 3rem;
+    padding: 22px 40px;
+}
+.h-secondary{
+    font-size: 2rem;
+    padding: 22px 40px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(197, 64, 64);
+    color: white;
+    border-radius: 10px;
+    /* margin: 17px 17px; */
+    font-size: 1.3rem;
+}
+
+.center{
     text-align: center;
-    border: 2px solid red;
-    border-radius: 20px;
-    height: 300px;
-    width: 300px;
-}  */
-
-
+    
+}

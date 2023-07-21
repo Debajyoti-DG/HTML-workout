@@ -1,39 +1,41 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-#navbar{
+
+#navbar {
     display: flex;
-    align-items: center; 
+    align-items: center;
     position: relative;
+    /* top: 0px; */
 }
 
 /* Logo and list(navigation) */
 
-#logo img{
+#logo img {
     margin: 3px 27px;
     padding: 10px 10px;
     height: 50px;
     width: 50px;
 }
 
-#navbar::before{
+#navbar::before {
     content: "";
     background-color: black;
     position: absolute;
-    /* top: 0;
-    left: 0; */
+    top: 0px;
+    left: 0px;
     height: 100%;
     width: 100%;
     opacity: 0.4;
     z-index: -1;
 }
 
-#navbar ul{
+#navbar ul {
     display: flex;
 }
 
-#navbar ul li{
+#navbar ul li {
     list-style: none;
     font-size: 1.3rem;
     /* font-family: 'Tektur', cursive; */
@@ -41,14 +43,15 @@
     font-family: 'DM Sans', sans-serif;
 }
 
-#navbar ul li a{
+#navbar ul li a {
     color: white;
     display: block;
     padding: 3px 15px;
     text-decoration: none;
     border-radius: 20px;
 }
-#navbar ul li a:hover{
+
+#navbar ul li a:hover {
     color: black;
     background-color: white;
 }
@@ -57,44 +60,47 @@
 /* Home section*/
 
 
-#home{
+#home {
     display: flex;
     flex-direction: column;
     padding: 20px 210px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 350px;
+    height: 465px;
     /* font-family: 'Lugrasimo', cursive; */
 }
-#home::before{
+
+#home::before {
     content: "";
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('Background.jpg') no-repeat center center/cover;
     position: absolute;
-    height: 100%;
+    height: 802px;
     width: 100%;
-    /* top: 0;
-    left: 0; */
+    top: 0px;
+    left: 0px;
     opacity: 0.88;
-    z-index: -4;
+    z-index: -2;
 
 }
 
 
 
 
-.btn:hover{
+.btn:hover {
     background-color: brown;
     cursor: pointer;
 }
 
-#home h1{
+#home h1 {
+    font-size: 4rem;
     color: white;
     text-align: center;
     font-family: 'Lugrasimo', cursive;
     margin-top: 11rem;
 }
-#home p{
+
+#home p {
     color: white;
     text-align: center;
     font-size: 1.5rem;
@@ -119,40 +125,152 @@
 
 
 /* Services section*/
-#services{
+#services {
     margin: 34px;
     display: flex;
+    margin-bottom: 4.5rem;
 }
-#services .box{
+
+#services .box {
     border: 2px solid rgb(248, 114, 114);
     padding: 34px;
     margin: 3px 6px;
     border-radius: 23px;
     background: rgb(244, 235, 235);
+    /* font-family: 'Lugrasimo', cursive; */
 }
-#services .box img{
+
+#services .box img {
     height: 100px;
     margin: auto;
     display: block;
 }
-#services{
+
+#services p {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+#abcd {
+    margin-top: 15rem;
+    font-family: 'Lobster', cursive;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+#abcd2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+#abcd3{
+    font-family: 'Lobster', cursive;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+/* #middle{
+    position: relative;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
+} */
+
+/* Client section */
+
+.clients-container {
+    position: relative;
+    height: 344px;
 }
-#abcd{
-    margin-top: 357px;
+
+.clients-container::before {
+    content: "";
+    position: absolute;
+    /* background-color: black; */
+    background: url('Clientbg.jpg') no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    z-index: -1;
 }
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients .images {
+    /* border: 2px solid red; */
+    position: relative;
+    display: flex;
+    height: 120px;
+    padding: 20px;
+}
+
+
+
+/* Contact Us */
+
+.contacts-container{
+    position: relative;
+    /* align-items: center;
+    justify-content: center; */
+    /* height: 344px; */
+}
+.contacts-container::before{
+    content: "";
+    position: absolute;
+    background: url('contact.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%; /*pixel setting gets hectic */
+    z-index: -1;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+}
+
+.contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22px;
+}
+.contact-box input, 
+.contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+.contact-box form{
+    width: 40%;
+}
+.contact-box label{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 
 
 /* Utility classes */
-.h-primary{
+.h-primary {
     font-size: 3rem;
     padding: 22px 40px;
 }
-.h-secondary{
-    font-size: 2rem;
+
+.h-secondary {
+    font-size: 2.1rem;
     padding: 22px 40px;
+    font-family: 'Merienda', cursive;
 }
-.btn{
+
+.btn {
     padding: 6px 20px;
     border: 2px solid white;
     background-color: rgb(197, 64, 64);
@@ -162,7 +280,15 @@
     font-size: 1.3rem;
 }
 
-.center{
+.center {
     text-align: center;
-    
+
+}
+footer{
+    position: static;
+    bottom: 0px;
+    width: 99.56%;
+    background-color: black;
+    color: white;
+    padding: 3px;
 }

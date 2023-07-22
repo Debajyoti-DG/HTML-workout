@@ -1,0 +1,19 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* Services section */
+#services{
+    flex-direction: column;
+}
+
+#services .box{
+
+}
+
+/* Clients section */
+
+#clients{
+    overflow: hidden;
+}

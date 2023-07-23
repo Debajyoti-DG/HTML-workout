@@ -3,11 +3,17 @@
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 #navbar {
     display: flex;
     align-items: center;
-    position: relative;
-    /* top: 0px; */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
 }
 
 /* Logo and list(navigation) */
@@ -27,7 +33,7 @@
     left: 0px;
     height: 100%;
     width: 100%;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -106,7 +112,7 @@
     font-size: 1.5rem;
     font-family: 'Lugrasimo', cursive;
     font-weight: bold;
-    margin: 22px 187px;
+    margin: 22px 34px;
 }
 
 /* #home p::before{
@@ -183,7 +189,7 @@
 
 .clients-container {
     position: relative;
-    height: 344px;
+    /* height: 344px; */
 }
 
 .clients-container::before {
@@ -207,6 +213,7 @@
     position: relative;
     display: flex;
     height: 120px;
+    /* height: auto; */
     padding: 20px;
 }
 

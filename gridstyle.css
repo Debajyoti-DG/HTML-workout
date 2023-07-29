@@ -1,49 +1,52 @@
-.container{
+.container {
     border: 2px solid black;
     display: grid;
     /* grid-template-columns: 300px 100px 100px; */
     /* grid-template-columns: 300px 100px auto; */
     /* grid-template-columns: 1fr 4fr 1fr; */
-    grid-template-columns: repeat(10,auto);
+    grid-template-columns: repeat(10, auto);
     grid-gap: 2rem;
 }
-.item{
+
+.item {
     /* height: 100px;
     width: 100px; */
     border: 2px solid red;
     padding: 15px 5px;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-rows: 1fr 1fr 4fr;
     grid-auto-rows: 2fr;
     /* grid-template-columns: 1fr 4fr 2fr; */
-    grid-template-columns: repeat(3,2fr);
+    grid-template-columns: repeat(3, 2fr);
     grid-gap: 1rem;
 }
-.box{
+
+.box {
     background-color: skyblue;
     border: 2px solid black;
 }
 
-.container2{
+.container2 {
     display: grid;
     /* grid-template-columns: 1fr 3fr 3fr; */
-    grid-template-columns: repeat(5,2fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(4, 1fr);
     /* grid-column-gap: 7rem;
     grid-row-gap: 1rem; */
     grid-gap: 1rem;
 }
-.boxx{
+
+.boxx {
     background-color: rgb(234, 186, 13);
     border: 2px solid black;
     padding: 20px;
 }
 
-/* To make an element span / designs of one grid item */
-.boxx:first-child{
+/* To make an element span / designs of 1st grid item */
+.boxx:first-child {
     /* grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -51,22 +54,146 @@
 
     /* Short hand notation */
 
-    grid-column: 1 / span 3;
-    grid-row: 1 / span 3;
+    /* starting position / how many cells to span */
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 3;
 }
 
 /* Autofit and minmax increases responsivness instantly */
-.container3{
+.container3 {
     display: grid;
     grid-gap: 1rem;
     /* grid-template-columns: 100px 100px 100px 100px; */
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
     align-items: center;
 }
-.boxer{
+
+.boxer {
     border: 2px solid black;
     background-color: aqua;
     padding: 20px;
+}
+
+.container4 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        'navbar navbar navbar navbar'
+        'section section section aside'
+        'footer footer footer footer ';
+}
+
+.itemz {
+    background-color: yellow;
+    border: 3px solid black;
+    padding: 12px 23px;
+}
+
+#navbar {
+    /* margin: auto;   /* positions the navbar in the centre */
+    grid-area: navbar;
+}
+
+#section {
+    grid-area: section;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+footer {
+    text-align: center;
+    grid-area: footer;
+}
+
+.container5 {
+    background-color: rgb(40, 221, 185);
+    border: 2px solid black;
+}
+
+@media only screen and (min-width: 300px) {
+    .container5 {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+    .container5 {
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
+    .container5 {
+        background-color: green;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .container5 {
+        background-color: blue;
+    }
+}
+
+
+.container6{
+    margin-top: 5rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+        'navbar navbar navbar navbar'
+        'section section section aside'
+        'footer footer footer footer ';
+}
+@media only screen and (min-width: 300px) {
+    .container6 {
+        background-color: yellow;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .container6 {
+        background-color: red;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'footer footer footer footer ';
+    }
+    aside{
+        display: none;
+    }
+    span{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .container6 {
+        background-color: green;
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'aside aside aside aside'
+            'footer footer footer footer ';
+    }
+    span{
+        display: block;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .container6 {
+        background-color: rgb(0, 0, 255);
+    }
+}
+
+.bdr {
+    border: 2px solid black;
+    padding: 10px 23px;
+    background-color: wheat;
 }

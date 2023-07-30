@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var a=78;
+        var b="Hello";
+        c= 34.55;
+        console.log(a);
+        console.log(b);
+        console.log(c+48.76);
+
+        //operators in JS
+        //operand - entities on which operators operate
+        //unary (x = -x;), binary (a+b)
+
+        var num1=23;
+        var num2=5;
+
+        //Arithemetic opareators; 
+        console.log("Num1 + Num2 is : " + (num1 + num2));
+        console.log("Num1 - Num2 is : " + (num1 - num2));
+        console.log("Num1 * Num2 is : " + (num1 * num2));
+        console.log("Num1 / Num2 is : " + (num1 / num2));
+        console.log("Num1 ** Num2 is : " + (num1 ** num2)); // ** means exponent
+        console.log("Num1++ is : " + (num1++));
+        console.log("++Num1 is : " + (++num1));
+        console.log("++Num1 + --num2 is : " + (++num1 + --num2));
+    </script>
+</head>
+
+<body>
+    <div class="conatiner">
+        <h1>This is a heading</h1>
+        <div id="content1"></div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore quisquam numquam id, et harum sed
+                hic nesciunt iure odit tenetur unde provident nihil saepe quaerat dolorem ratione cupiditate obcaecati
+                maxime neque suscipit! Vel, inventore doloremque fugiat vitae qui ipsum aliquid, distinctio, in quam
+                soluta voluptates obcaecati a at eum tempora! Voluptatibus fugiat mollitia quod soluta id veritatis
+                commodi iure rerum nesciunt, fuga ipsam minima dicta libero nobis officiis repellat alias ad, explicabo
+                optio rem voluptates iusto? A, deleniti voluptate esse aliquam laboriosam officia laborum consequuntur
+                asperiores harum temporibus amet. Vel, itaque quaerat dignissimos saepe ut amet aspernatur nesciunt
+                reprehenderit.</p>
+        </div>
+    </div>
+    <script>
+        //Write the JS here
+        console.log('Hello world');
+
+        var str1="Hey";
+        var str2="There";
+        var str3="jhfsdhey";
+        console.log(str1 +"\n" +str2);
+        console.log(str1+str2+str3);
+
+        //use backticks `` with ${} to achieve proper strings
+        var temp=`${str1} ${str2} is what he said but 'she' heard "${str3}"`;
+        console.log(temp);
+        
+        var len=str2.length;
+        console.log(`Length is "${len}" characters`);
+        
+        var y=new String("Deb");
+        console.log(y);
+
+        //Inserted element dynamically using Js
+        document.getElementById('content1').innerHTML = '<h2> This is a h2 Heading </h2>'
+    </script>
+</body>
+
+</html>

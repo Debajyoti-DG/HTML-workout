@@ -139,7 +139,7 @@ footer {
 }
 
 
-.container6{
+.container6 {
     margin-top: 5rem;
     display: grid;
     grid-gap: 1rem;
@@ -148,6 +148,7 @@ footer {
         'section section section aside'
         'footer footer footer footer ';
 }
+
 @media only screen and (min-width: 300px) {
     .container6 {
         background-color: yellow;
@@ -157,15 +158,17 @@ footer {
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .container6 {
         background-color: red;
-            grid-template-areas:
-                'navbar navbar navbar navbar'
-                'section section section section'
-                'footer footer footer footer ';
+        grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section'
+            'footer footer footer footer ';
     }
-    aside{
+
+    aside {
         display: none;
     }
-    span{
+
+    span {
         display: block;
         text-align: center;
     }
@@ -180,7 +183,8 @@ footer {
             'aside aside aside aside'
             'footer footer footer footer ';
     }
-    span{
+
+    span {
         display: block;
         text-align: center;
     }

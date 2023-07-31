@@ -49,3 +49,19 @@ console.log("\n\n\nNew substr function \n");
 // 7 characters starting from 1 index
 var substr1=str.substr(1,7);
 console.log(substr1);
+
+//replace substring in string
+var replaced = str.replace('This is','They are');
+console.log(replaced);
+console.log(replaced.toUpperCase());
+console.log(replaced.toLowerCase());
+
+//concatenation
+var newstr=str.concat('new str');
+console.log(newstr);
+
+var whtspc="    this containes       whitespaces    ";
+console.log(whtspc);
+console.log(whtspc.trim());
+console.log(whtspc.trim().charAt(6));
+console.log(whtspc.trim()[6]);

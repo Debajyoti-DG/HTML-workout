@@ -128,7 +128,7 @@ let var4 = true;
 let var5 = null;
 let var6 = undefined;
 
-//object 
+//object --> Non-primitive data type in JavaScript
 let employee = {
 
     //key = value (format)
@@ -204,3 +204,105 @@ function sum(a,b,c){
 
 let add=sum(1,2,3);
 console.log(add);  //Proper function as it returns a value
+
+
+//ALERT, PROMPT, CONFIRM
+
+//Alert does not return anything
+alert("This is an alert message");  //uff ki darun jinish eta. Opens a modal...page is unreactive until user presses OK
+
+
+//Prompt
+let playername = prompt("This is a prompt\nWhat is your name ? ", "Guest");  //the 2nd arguement is the default arguement
+console.log(playername + " is the name entered by the player.");
+
+
+//Confirm
+let deletePost = confirm("This is confirm\nDo you really want to delete this post ? "); //retruns TRUE if we press OK else returns FALSE
+console.log(deletePost); 
+
+
+if (deletePost){
+    //condtion on succesfull deletion
+    console.log("Your post has been deleted succesfully !");
+}
+else{
+    //condition if no deletion
+    console.log("Your post has not been deleted !!!");
+
+}
+
+let userage = prompt("What is your age ?", 16);
+if(userage < 18){
+    alert("You are Underage");
+
+}
+else{
+    console.log("Welcome");
+    alert("You are eligible");
+}
+
+let i=0;
+// let j=0;
+// for(i=1;i<=5;i++){
+//     for(j=1;j<=i;j++){
+//         console.log(j);
+//     }
+//     console.log("\n");
+// }
+i=0;
+for(i=1;i<=5;i++){
+    console.log(i);
+}
+// i=0;
+// j=0;
+// for(i=1;i<=5;i++){
+//     for(j=1;j<=i;j++){
+//         console.log("*");
+//     }
+//     console.log("\n");
+// }
+
+let friends=["fsd","fdxfg","asfsdg","xdzawraw","aff"];
+// for (let index = 0; index < friends.length; index++) {
+//     const element = friends[index];
+//     //console.log("Hello, " + friends[index]);
+//     console.log("Hello, " + element);
+// }
+
+//Modern way to do things
+friends.forEach(function f(element){
+    console.log("Hello There, " + element);
+});
+
+//Another modern way
+for(element of friends){
+    console.log("This is done using another way. Hello There, " + element);
+}
+
+//This is an object --> Non-Primitive data type
+let Miltan={
+    name: "Miltan",
+    age: 40,
+    passion : "Cooking and Song"
+}
+
+//use this loop to iterate over objects in JavaScripts
+for (key in Miltan){
+    console.log(`The ${key} is ${Miltan[key]}`);
+}
+
+//while and do while loop
+
+i=0;
+while(i<4){
+    console.log(`${i} is less than 4`);
+    i++;
+}
+
+console.log("\n\n\nusing do while");
+i=0;
+do{
+    console.log(`${i} is less than 4`);
+    i++;
+}while(i<4);

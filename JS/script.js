@@ -171,3 +171,36 @@ console.log(names1);
 let arr1=[7878,3,76,44,4545,2];
 arr1=arr1.sort();
 console.log(arr1);
+
+//functions --> enhances code reusability
+
+function greet(name){
+    console.log(name + " is a good person");
+}
+greet("Deb");
+greet("Margot Robbie");
+greet(11);
+
+
+//greetings="This is greeting";
+function greet(name, greetings="Greetings from JavaScript."){
+    console.log("Good Morning " + name + ". " + greetings);
+    console.log(name + " is a good person");
+}
+
+greet("Deb","This is greeting.");
+greet("RRR"); //As we do not mention any second parameter, the second one (greetings="Greetings from JavaScript") is executed as it is the DEFAULT VALUE mentioned in the function parameter
+
+let storing=greet("Deb");
+console.log(storing); //This will show undefined as the function greet does not return anything
+
+//To make a functon return a value, we must write the program as this
+function sum(a,b,c){
+    let d=a+b+c;
+    return d;
+    //anything written after the return statement will never be executed, as it takes control out of the block 
+    //console.log(" In sooth I know not why I am so ecstatic ;) ");
+}
+
+let add=sum(1,2,3);
+console.log(add);  //Proper function as it returns a value

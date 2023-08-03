@@ -306,3 +306,9 @@ do{
     console.log(`${i} is less than 4`);
     i++;
 }while(i<4);
+
+let arr = ["Hello","World",1,null,true,0,undefined];
+for(k in arr){
+    console.log(arr[k]);
+}
+

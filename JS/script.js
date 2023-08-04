@@ -205,7 +205,7 @@ function sum(a,b,c){
 let add=sum(1,2,3);
 console.log(add);  //Proper function as it returns a value
 
-
+/*
 //ALERT, PROMPT, CONFIRM
 
 //Alert does not return anything
@@ -241,6 +241,8 @@ else{
     console.log("Welcome");
     alert("You are eligible");
 }
+*/
+
 
 let i=0;
 // let j=0;
@@ -312,3 +314,8 @@ for(k in arr){
     console.log(arr[k]);
 }
 
+// let main=document.getElementById('main');
+// console.log(main);
+
+// let sel7=document.querySelector('#nav>li');
+// console.log("The value that is returned is : ",sel7);

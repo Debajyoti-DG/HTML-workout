@@ -40,11 +40,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolore quisquam numquam id, et harum sed
                 hic nesciunt iure odit tenetur unde provident nihil saepe quaerat dolorem ratione cupiditate obcaecati
                 maxime neque suscipit! Vel, inventore doloremque fugiat vitae qui ipsum aliquid, distinctio, in quam
-                soluta voluptates obcaecati a at eum tempora! Voluptatibus fugiat mollitia quod soluta id veritatis
-                commodi iure rerum nesciunt, fuga ipsam minima dicta libero nobis officiis repellat alias ad, explicabo
-                optio rem voluptates iusto? A, deleniti voluptate esse aliquam laboriosam officia laborum consequuntur
-                asperiores harum temporibus amet. Vel, itaque quaerat dignissimos saepe ut amet aspernatur nesciunt
-                reprehenderit.</p>
+                soluta voluptates obcaecati a at eum tempora!</p>
         </div>
     </div>
 
@@ -52,8 +48,8 @@
     <h3> Done in script.js </h3>
 
 
-    <div>
-        <ul>
+    <div id = "main" class = "container">
+        <ul id="nav">
             <li>Item-1</li>
             <li>Item-2</li>
             <li>Item-3</li>
@@ -64,8 +60,50 @@
         </ul>
     </div>
 
+    <div class="container">
+        <h2>Another container class</h2>
+    </div>
+
     <script>
         //Write the JS here
+
+        let main=document.getElementById('main');
+        console.log(main);
+        
+        let nav=document.getElementById('nav');
+        console.log(nav);
+        console.log(nav.innerHTML); //displays the content within the nav id
+        
+        //changing contents dynamically
+        nav.innerHTML="<li>Dynamic element</li> , <li>Dynamic element2</li>";
+        console.log(nav.innerHTML); //we have changed the contents of the DOM element with id 'nav'
+        
+        let elements=document.getElementsByClassName('container');
+        console.log(elements);
+        console.log("Get by class name 1st element : ");
+        console.log(elements[0]);
+        console.log("Get by class name 2nd element : ");
+        console.log(elements[1]);
+
+
+        //returns the first element that matches the query
+        let sel=document.querySelector('.container');
+        console.log("Selector returns : ",  sel);
+        let sel2=document.querySelector('#nav');
+        console.log("Selector returns : ",  sel2);
+        let sel3=document.querySelector('ul>li');  //returns the first li under ul
+        console.log("Selector returns : ",  sel3);
+        let sel4=document.querySelector('#nav>li'); //returns the first li under #nav, which is ul
+        console.log("Selector returns : ",  sel4);
+        
+        
+        let sel5=document.querySelectorAll('#nav>li'); //returns all the first li under #nav, which is ul
+        console.log("Selector returns : ",  sel5);
+        sel5[0].innerHTML="Inserted";
+        console.log("Selector returns : ",  sel5);
+
+        
+        // console.log("hello"+3);
         console.log('Hello world');
 
         var str1 = "Hey";

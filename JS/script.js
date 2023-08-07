@@ -319,3 +319,32 @@ for(k in arr){
 
 // let sel7=document.querySelector('#nav>li');
 // console.log("The value that is returned is : ",sel7);
+
+
+
+//Js Events
+
+function toggleHide(){
+    //let btn = document.getElementById('btn');
+    let list = document.getElementById('list');
+    
+    //Even if we dont get element by ID, the element with the specific ID will be selected
+    if(list.style.display != 'none'){
+        list.style.display = 'none';
+    }
+    else{
+        list.style.display = 'block';
+    }
+}
+// function run(){
+//     alert("hellooooooo");
+// }
+let para = document.getElementById('para');
+para.addEventListener('mouseover', function run(){
+    console.log('On the para')
+});
+
+para.addEventListener('mouseout',function run(){
+    console.log('Outside para')
+});
+

@@ -5,32 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    <script src="script.js"></script>
-    <!-- var a=78;
-        var b="Hello";
-        c= 34.55;
-        console.log(a);
-        console.log(b);
-        console.log(c+48.76);
-
-        //operators in JS
-        //operand - entities on which operators operate
-        //unary (x = -x;), binary (a+b)
-
-        var num1=23;
-        var num2=5;
-
-        //Arithemetic opareators; 
-        console.log("Num1 + Num2 is : " + (num1 + num2));
-        console.log("Num1 - Num2 is : " + (num1 - num2));
-        console.log("Num1 * Num2 is : " + (num1 * num2));
-        console.log("Num1 / Num2 is : " + (num1 / num2));
-        console.log("Num1 ** Num2 is : " + (num1 ** num2)); // ** means exponent
-        console.log("Num1++ is : " + (num1++));
-        console.log("++Num1 is : " + (++num1));
-        console.log("++Num1 + --num2 is : " + (++num1 + --num2));
-    </script> -->
+    
 </head>
+<style>
+    #btn {
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        font-weight: bold;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
 
 <body>
     <div class="conatiner">
@@ -48,7 +35,7 @@
     <h3> Done in script.js </h3>
 
 
-    <div id = "main" class = "container">
+    <div id="main" class="container">
         <ul id="nav">
             <li>Item-1</li>
             <li>Item-2</li>
@@ -64,21 +51,75 @@
         <h2>Another container class</h2>
     </div>
 
+    <h2>JavaScript Events</h2>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime amet sapiente repudiandae ex eius quo
+        vel voluptate suscipit perspiciatis, praesentium voluptas quam libero. Labore reprehenderit, ullam amet
+        excepturi pariatur obcaecati magnam aut nihil nostrum!
+        <br><br>
+        Browser events :
+    </p>
+    <ul id="list">
+        <li>click</li>
+        <li>contextMenu</li>
+        <li>mouseover / mouseout</li>
+        <li>mouseup / mousedown</li>
+        <li>mousemove</li>
+
+
+        <li>submit (form event)</li>
+        <li>focus (form event)</li>
+
+
+        <li>DOMContentLoaded</li>
+
+
+        <li>transitionend (for CSS)</li>
+
+    </ul>
+
+    <button id="btn" onclick="toggleHide()">Show / Hide</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         //Write the JS here
 
-        let main=document.getElementById('main');
+        //Event Listeners
+        // let para = document.getElementById('para');
+        // para.addEventListener('mouseover', function run() {
+        //     alert('On the para')
+        // });
+
+        // para.addEventListener('mouseout', function run() {
+        //     alert('Outside para')
+        // });
+
+        let main = document.getElementById('main');
         console.log(main);
-        
-        let nav=document.getElementById('nav');
+
+        let nav = document.getElementById('nav');
         console.log(nav);
         console.log(nav.innerHTML); //displays the content within the nav id
-        
+
         //changing contents dynamically
-        nav.innerHTML="<li>Dynamic element</li> , <li>Dynamic element2</li>";
+        nav.innerHTML = "<li>Dynamic element</li> , <li>Dynamic element2</li>";
         console.log(nav.innerHTML); //we have changed the contents of the DOM element with id 'nav'
-        
-        let elements=document.getElementsByClassName('container');
+
+        let elements = document.getElementsByClassName('container');
         console.log(elements);
         console.log("Get by class name 1st element : ");
         console.log(elements[0]);
@@ -87,22 +128,22 @@
 
 
         //returns the first element that matches the query
-        let sel=document.querySelector('.container');
-        console.log("Selector returns : ",  sel);
-        let sel2=document.querySelector('#nav');
-        console.log("Selector returns : ",  sel2);
-        let sel3=document.querySelector('ul>li');  //returns the first li under ul
-        console.log("Selector returns : ",  sel3);
-        let sel4=document.querySelector('#nav>li'); //returns the first li under #nav, which is ul
-        console.log("Selector returns : ",  sel4);
-        
-        
-        let sel5=document.querySelectorAll('#nav>li'); //returns all the first li under #nav, which is ul
-        console.log("Selector returns : ",  sel5);
-        sel5[0].innerHTML="Inserted";
-        console.log("Selector returns : ",  sel5);
+        let sel = document.querySelector('.container');
+        console.log("Selector returns : ", sel);
+        let sel2 = document.querySelector('#nav');
+        console.log("Selector returns : ", sel2);
+        let sel3 = document.querySelector('ul>li');  //returns the first li under ul
+        console.log("Selector returns : ", sel3);
+        let sel4 = document.querySelector('#nav>li'); //returns the first li under #nav, which is ul
+        console.log("Selector returns : ", sel4);
 
-        
+
+        let sel5 = document.querySelectorAll('#nav>li'); //returns all the first li under #nav, which is ul
+        console.log("Selector returns : ", sel5);
+        sel5[0].innerHTML = "Inserted";
+        console.log("Selector returns : ", sel5);
+
+
         // console.log("hello"+3);
         console.log('Hello world');
 
@@ -125,6 +166,7 @@
         //Inserted element dynamically using Js
         document.getElementById('content1').innerHTML = '<h2> This is a h2 Heading </h2>'
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

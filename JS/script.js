@@ -143,12 +143,12 @@ console.log(employee);
 //two ways to display a particular element
 console.log("Salary is : " + employee.salary);
 console.log("Salary is : " + employee['salary']);
-console.log("Genre is : " + employee["genre of song"]); 
+console.log("Genre is : " + employee["genre of song"]);
 // canot use employee.genre of songs  ---> ERROR
 
 
 //Array
-let names=[1, 2, true, "this is a string", null];
+let names = [1, 2, true, "this is a string", null];
 console.log(names);
 console.log(names[2]);
 
@@ -156,25 +156,25 @@ names.push("hello");
 console.log(names);
 
 //another way to declare array 
-let names1= new Array(11,2,13,4, true, "hello", null, undefined);
+let names1 = new Array(11, 2, 13, 4, true, "hello", null, undefined);
 console.log(names1);
 console.log(names1[4]);
 console.log(names1.length);
 
 //This will create a new array with 23 elements
-let names2=new Array(23);
+let names2 = new Array(23);
 console.log(names2);
 
-names1=names1.sort();
+names1 = names1.sort();
 console.log(names1);
 
-let arr1=[7878,3,76,44,4545,2];
-arr1=arr1.sort();
+let arr1 = [7878, 3, 76, 44, 4545, 2];
+arr1 = arr1.sort();
 console.log(arr1);
 
 //functions --> enhances code reusability
 
-function greet(name){
+function greet(name) {
     console.log(name + " is a good person");
 }
 greet("Deb");
@@ -183,26 +183,26 @@ greet(11);
 
 
 //greetings="This is greeting";
-function greet(name, greetings="Greetings from JavaScript."){
+function greet(name, greetings = "Greetings from JavaScript.") {
     console.log("Good Morning " + name + ". " + greetings);
     console.log(name + " is a good person");
 }
 
-greet("Deb","This is greeting.");
+greet("Deb", "This is greeting.");
 greet("RRR"); //As we do not mention any second parameter, the second one (greetings="Greetings from JavaScript") is executed as it is the DEFAULT VALUE mentioned in the function parameter
 
-let storing=greet("Deb");
+let storing = greet("Deb");
 console.log(storing); //This will show undefined as the function greet does not return anything
 
 //To make a functon return a value, we must write the program as this
-function sum(a,b,c){
-    let d=a+b+c;
+function sum(a, b, c) {
+    let d = a + b + c;
     return d;
     //anything written after the return statement will never be executed, as it takes control out of the block 
     //console.log(" In sooth I know not why I am so ecstatic ;) ");
 }
 
-let add=sum(1,2,3);
+let add = sum(1, 2, 3);
 console.log(add);  //Proper function as it returns a value
 
 /*
@@ -244,7 +244,7 @@ else{
 */
 
 
-let i=0;
+let i = 0;
 // let j=0;
 // for(i=1;i<=5;i++){
 //     for(j=1;j<=i;j++){
@@ -252,8 +252,8 @@ let i=0;
 //     }
 //     console.log("\n");
 // }
-i=0;
-for(i=1;i<=5;i++){
+i = 0;
+for (i = 1; i <= 5; i++) {
     console.log(i);
 }
 // i=0;
@@ -265,7 +265,7 @@ for(i=1;i<=5;i++){
 //     console.log("\n");
 // }
 
-let friends=["fsd","fdxfg","asfsdg","xdzawraw","aff"];
+let friends = ["fsd", "fdxfg", "asfsdg", "xdzawraw", "aff"];
 // for (let index = 0; index < friends.length; index++) {
 //     const element = friends[index];
 //     //console.log("Hello, " + friends[index]);
@@ -273,44 +273,44 @@ let friends=["fsd","fdxfg","asfsdg","xdzawraw","aff"];
 // }
 
 //Modern way to do things
-friends.forEach(function f(element){
+friends.forEach(function f(element) {
     console.log("Hello There, " + element);
 });
 
 //Another modern way
-for(element of friends){
+for (element of friends) {
     console.log("This is done using another way. Hello There, " + element);
 }
 
 //This is an object --> Non-Primitive data type
-let Miltan={
+let Miltan = {
     name: "Miltan",
     age: 40,
-    passion : "Cooking and Song"
+    passion: "Cooking and Song"
 }
 
 //use this loop to iterate over objects in JavaScripts
-for (key in Miltan){
+for (key in Miltan) {
     console.log(`The ${key} is ${Miltan[key]}`);
 }
 
 //while and do while loop
 
-i=0;
-while(i<4){
+i = 0;
+while (i < 4) {
     console.log(`${i} is less than 4`);
     i++;
 }
 
 console.log("\n\n\nusing do while");
-i=0;
-do{
+i = 0;
+do {
     console.log(`${i} is less than 4`);
     i++;
-}while(i<4);
+} while (i < 4);
 
-let arr = ["Hello","World",1,null,true,0,undefined];
-for(k in arr){
+let arr = ["Hello", "World", 1, null, true, 0, undefined];
+for (k in arr) {
     console.log(arr[k]);
 }
 
@@ -324,15 +324,27 @@ for(k in arr){
 
 //Js Events
 
-function toggleHide(){
+// Browser events :
+
+// click
+// contextMenu
+// mouseover / mouseout
+// mouseup / mousedown
+// mousemove
+// submit (form event)
+// focus (form event)
+// DOMContentLoaded
+// transitionend (for CSS)
+
+function toggleHide() {
     //let btn = document.getElementById('btn');
     let list = document.getElementById('list');
-    
+
     //Even if we dont get element by ID, the element with the specific ID will be selected
-    if(list.style.display != 'none'){
+    if (list.style.display != 'none') {
         list.style.display = 'none';
     }
-    else{
+    else {
         list.style.display = 'block';
     }
 }
@@ -340,11 +352,72 @@ function toggleHide(){
 //     alert("hellooooooo");
 // }
 let para = document.getElementById('para');
-para.addEventListener('mouseover', function run(){
+para.addEventListener('mouseover', function run() {
     console.log('On the para')
 });
 
-para.addEventListener('mouseout',function run(){
+para.addEventListener('mouseout', function run() {
     console.log('Outside para')
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JavaScript SetTimeOut and ClearTimeOut , SetInterval and clearInterval, Time
+
+//If we want to repeat something to run after every set interval of time, then we set its time
+
+// setTimeout --> Allows us to run the function once after the  interval of Time
+// clearTimeout --> Allows us to run the function repeatedly after the  interval of Time
+
+function greet(namezz, byetext) {
+    console.log("Good morning " + namezz + ", " + byetext + ".");
+}
+greet();
+
+
+
+
+
+// setTimeout(greet, 5000, "Deb", "Take care");  // no parenthesis of function, just function name
+//setTimeout returns an unique timeout id which we can use in clear time out
+
+let timeOut = setTimeout(greet, 5000, "Deb", "Take care");
+console.log(timeOut);
+
+clearTimeout(timeOut);
+
+
+
+
+
+//setInterval(greet, 1000, "DEB", "Take care"); //To repeatedly run after an interval
+//setInterval returns an unique Interval ID which can be used for other purposes
+
+let interval = setInterval(greet, 1000, "DEB", "Take care");
+console.log("hello " + interval);
+
+clearInterval(interval);
+
+
+
+//Can make clock websites Using this basic function
+function displaytime() {
+    time = new Date();
+    console.log(time);
+    document.getElementById('time').innerText = time;
+}
+
+setInterval(displaytime, 1000);
+
 

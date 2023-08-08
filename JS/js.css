@@ -1,0 +1,29 @@
+#btn {
+    padding: 10px 14px;
+    background-color: red;
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.CSStrials{
+    background-color: black;
+    color: white;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid green;
+}
+
+#trial{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}

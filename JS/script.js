@@ -413,7 +413,7 @@ clearInterval(interval);
 
 //Can make clock websites Using this basic function
 function displaytime() {
-    time = new Date();
+    time = new Date(); /* here time is a constructor and Date is an object */
     console.log(time);
     document.getElementById('time').innerText = time;
 }
@@ -421,3 +421,42 @@ function displaytime() {
 setInterval(displaytime, 1000);
 
 
+console.log("Lets see today's date and time");
+let time =  new Date();
+console.log(time);
+
+let dt=new Date(1000); /* Returns the number of milliseconds passed after a referrence time  */
+console.log(dt);
+let NewDate = new Date("2029-09-30");
+console.log(NewDate);
+
+//let var = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+let A_Date = new Date(2099, 11, 31, 23, 59, 55, 500);
+console.log(A_Date);
+
+let yr = A_Date.getFullYear();
+console.log("The year is : " + yr);
+
+let mn = A_Date.getMonth();
+console.log("The month is : " + mn);
+
+let dt1 = A_Date.getDate();
+console.log("The date is : " + dt1);
+
+let hr = A_Date.getHours();
+console.log("The hour is : " + hr);
+
+let day=A_Date.getDay();
+console.log("The day is : " + day);
+
+//setDate....setHours....setMinutes....etc.
+A_Date.setDate(5); // we assign a new date = 5 to the previous Date
+console.log(A_Date);
+
+console.log(Date.now());   // Returns the current time stamp
+
+setInterval(UpdateTime, 1000);
+
+function UpdateTime(){
+    timeNow.innerHTML = new Date();
+}

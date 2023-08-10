@@ -387,8 +387,6 @@ greet();
 
 
 
-
-
 // setTimeout(greet, 5000, "Deb", "Take care");  // no parenthesis of function, just function name
 //setTimeout returns an unique timeout id which we can use in clear time out
 
@@ -460,3 +458,60 @@ setInterval(UpdateTime, 1000);
 function UpdateTime(){
     timeNow.innerHTML = new Date();
 }
+
+
+//ARROW NOTATION FOR FUNCTIONS
+
+
+//arrow notation for the same greet function
+
+let greet1 = () => {
+    console.log("We are inside the greet 1 function");
+}
+greet1();
+
+//  ----- OR -----
+
+let greet2 = () => console.log("We are inside the greet2 function");
+greet2();
+
+let sum1 = (a,b) => a+b;
+console.log(sum1(12,43));
+
+let obj1 = {
+    array : ["deb","rohan","sagnik","suvam","sapta","shamba"],
+    greeting : "Good Morning. ",
+    
+    // speak(){
+    //     this.array.forEach(function f(student){
+    //         console.log("Hello, " + student);
+    //     });
+
+    // We write it in this way instead EASIER APPROACH
+
+    speak(){
+        this.array.forEach((student) => {
+            console.log(this.greeting + "Hello, " + student);
+        });
+    }
+}
+
+obj1.speak();
+console.log(obj1.array);
+
+
+//IMPORTANT NOTE ABOUT ARROW NOTATION
+
+/*
+
+//Lexical 'this'
+
+ If we use arrow notation, then we not need to use the 'this' function as it will point to the instance within the object. Here, the 'this' points to the object outside and hence we get the required value.
+
+ Arrow function nijer parent er 'this' ke nebe
+
+ However, if we write a function normally, then we do not need to use the 'this' function. If we do then it will search for that particular instance within the function itself and return undefined.
+
+ Normal function nijer moddhe 'this' ke khujbe...pele bhalo na pele undefined
+
+ */

@@ -412,7 +412,7 @@ clearInterval(interval);
 //Can make clock websites Using this basic function
 function displaytime() {
     time = new Date(); /* here time is a constructor and Date is an object */
-    console.log(time);
+    //console.log(time);
     document.getElementById('time').innerText = time;
 }
 
@@ -482,16 +482,17 @@ let obj1 = {
     array : ["deb","rohan","sagnik","suvam","sapta","shamba"],
     greeting : "Good Morning. ",
     
-    // speak(){
-    //     this.array.forEach(function f(student){
-    //         console.log("Hello, " + student);
-    //     });
-
+//     speak(){
+//         this.array.forEach(function f(student){
+//             console.log(this.greeting + "Hello, " + student); //this.greeting returns undefined as greeting is not present inside function
+//         });
+//     }
+// }
     // We write it in this way instead EASIER APPROACH
 
     speak(){
         this.array.forEach((student) => {
-            console.log(this.greeting + "Hello, " + student);
+            console.log(this.greeting + "Hello, " + student); //this.greting returns the expected value because it points to he greeting within obj1
         });
     }
 }
@@ -506,12 +507,68 @@ console.log(obj1.array);
 
 //Lexical 'this'
 
- If we use arrow notation, then we not need to use the 'this' function as it will point to the instance within the object. Here, the 'this' points to the object outside and hence we get the required value.
+ If we use arrow notation, then the 'this' function as it will point to the instance within the object. Here, the 'this' points to the object outside and hence we get the required value.
 
  Arrow function nijer parent er 'this' ke nebe
 
- However, if we write a function normally, then we do not need to use the 'this' function. If we do then it will search for that particular instance within the function itself and return undefined.
+ However, if we write a function normally, then it will search for that particular instance within the function itself and return undefined.
 
  Normal function nijer moddhe 'this' ke khujbe...pele bhalo na pele undefined
 
  */
+
+
+
+
+ // Math object
+
+ let m1 = Math;
+console.log(m1);
+
+
+// Some constants from math object
+
+// Math.PI
+// Math.E
+// Math.LN10
+// Math.LN2
+// Math.LOG2E
+// Math.LOG10E
+// Math.SQRT1_2
+// Math.SQRT2
+
+//Math.sqrt() 
+//Math.round()
+//Math.pow(a,b)
+//Math.ceil()
+//Math.floor()
+//Math.abs()
+
+// Trigonometric values are to be given in Radians
+
+//Math.sin()
+//Math.sin(Math.PI/2)
+//Math.cos(Math.PI/2)
+//Math.tan(Math.PI/2)
+
+//Math.min(a,b,c,...)
+//Math.max(a,b,c,...)
+
+console.log(Math.max(12,323,455,656,8889,232,22));
+
+//Generating a Random number --> returns a random number between 0 and 1
+// To generate a random number between a,b --> a + (b-a)*Math.random()
+
+//Math.random()
+
+
+
+
+// document.getElementById("hello").innerHTML="HOLAAAA !!!";
+document.getElementById("hello").innerText="\nHOLAAAA !!!";
+
+
+
+
+// JSON 
+

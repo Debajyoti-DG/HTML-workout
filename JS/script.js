@@ -572,3 +572,25 @@ document.getElementById("hello").innerText="\nHOLAAAA !!!";
 
 // JSON 
 
+let jsonObj = {
+    name : "Deb",
+    college : "FIEM",
+    dept : "CSE",
+    roll : "22CSE064",
+    univroll : "14800122049"
+}
+
+console.log(jsonObj);
+
+//We convert our object into a string to transport data using JSON.stringify() function 
+let myjsonStr = JSON.stringify(jsonObj);
+console.log(myjsonStr);
+
+myjsonStr = myjsonStr.replace("Deb","Debajyoti");
+console.log(myjsonStr);
+
+//Converting back to object
+
+let newJsonObj = JSON.parse(myjsonStr); //should be a valid string otherwise we get parse error
+console.log(newJsonObj);
+

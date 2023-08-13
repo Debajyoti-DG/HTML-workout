@@ -17,11 +17,12 @@ for example, in the NodeJs terminal, we write
     _ (underscore) refers to the previous variable
     
     That is, _ now is 69 (a+c)
-    */
+
+*/
    
    
    
-// Open terminal and then type node .\name_of_your_file + tab to auto-complete
+// Open terminal and then type node then the name_of_your_file + tab to auto-complete
 // Use ctrl + C to quit the current work and .exit to come out of NodeJS
 
 // console.log("Hello world");

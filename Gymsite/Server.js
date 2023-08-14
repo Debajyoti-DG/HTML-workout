@@ -8,10 +8,14 @@ const port = 3000;
 
 //Our peronalised Home and about pages
 
-const home = fs.readFileSync("Gymsite/Home.html");
-const about = fs.readFileSync("Gymsite/AboutUs.html");
-const fitness = fs.readFileSync("Gymsite/Fitness.html");
-const contact = fs.readFileSync("Gymsite/Contact.html");
+// const home = fs.readFileSync("Gymsite/Home.html");
+// const about = fs.readFileSync("Gymsite/AboutUs.html");
+// const fitness = fs.readFileSync("Gymsite/Fitness.html");
+// const contact = fs.readFileSync("Gymsite/Contact.html");
+const home = fs.readFileSync("./Home.html");
+const about = fs.readFileSync("./AboutUs.html");
+const fitness = fs.readFileSync("./Fitness.html");
+const contact = fs.readFileSync("./Contact.html");
 
 const server = http.createServer((req, res) => {
     console.log(req.url);
@@ -20,21 +24,26 @@ const server = http.createServer((req, res) => {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
+    // res.end(home);
+
     if (url == '/'){
         res.end(home);
     }
-    else if (url == '/Gymsite/AboutUs.html'){
+
+    // else if
+    else if (url == '/about'){
         res.end(about);
     }
-    else if (url == '/Gymsite/Fitness.html'){
+    else if (url == '/fitness'){
         res.end(fitness);
     }
-    else if (url == '/Gymsite/Contact.html'){
+    else if (url == '/contact'){
         res.end(contact);
     }
     else{
         res.statusCode=404;
         res.end("<h1> Error 404 not found. </h1>");
+        // res.end(home);
     }
 });
 

@@ -1,3 +1,5 @@
+//TO CREATE A SERVER FOR GYMSITE AND RUN IT
+
 //Always mention the folder name first ... eg ... node .\JS\Server.js otheriwse we end up with module not found
 
 const http = require("http");
@@ -50,3 +52,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, local_host, () => {
     console.log(`Server is runnning at : http://${local_host}:${port}/`);
 });
+
+// console.log("kfhsiffdruighdiguhrfiogdkjgsedrifjofihdrfejgjkdrfslknkf");

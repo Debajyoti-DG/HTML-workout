@@ -32,9 +32,13 @@ for example, in the NodeJs terminal, we write
 //This is a code to run your first backend website. CONGRATULATIONS !!!
 
 const http = require('http');
-/* It means the function in the module exported from http ( mentioned in require(); ) will be stored in const http to use later when it is imported here. 
+/* 
 
-If an object was exported we should use the . operator as always and as shown below*/
+It means the function in the module exported from http ( mentioned in require(); ) will be stored in const http to use later when it is imported here. 
+
+If an object was exported we should use the . operator as always and as shown below
+
+*/
 
 const hostname = '127.0.0.1';
 const port = 3000;

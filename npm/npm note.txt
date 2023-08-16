@@ -6,7 +6,7 @@
 
 
 
-To see a version npm view package_name version.
+To see a version --> npm view <package_name> version.
 
 
 

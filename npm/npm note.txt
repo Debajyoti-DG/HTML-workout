@@ -1,0 +1,49 @@
+-------- VERSION --------
+
+^ means exact version that will be installed
+~ (tilde) means latest version will be installed plus if any other patch that has been added
+> means the version after the mentioned version will be installed
+
+
+
+To see a version npm view package_name version.
+
+
+
+
+Whenever we look at a version, that looks like --> 1.3.5
+
+It is in the format of Major.Minor.Patch
+
+Major --> Major version
+Minor --> Minor version / any new functionality, features or development
+Patch --> Bug fixes
+
+When we make a software, we usually start from Version 1.0.0 , and then continue to add other developments
+
+
+
+---------- devDependancies ----------
+
+Use npm install <package_name> --save-dev 
+This stores the package as devDependancies in the JSON file
+
+
+
+Use npm install <package_name> --global 
+
+This allows the package to be globally installed and one an use it, not just in one particular project, but anywhere within this computer from everywhere. 
+
+
+Dependancies : 
+This refers to the packages on which depend our project and development. It is a library that a project needs to function effectively.
+
+
+
+--------- Useful dependancies ---------
+
+nodemon (devDependancies) : It restarts the node application / server afresh just after we save our new code.
+
+express
+slugify
+browserify

@@ -1,0 +1,21 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "This is my npm initialisation and this is the best",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Deb"
+  ],
+  "author": "Debajyoti",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "slugify": "~1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

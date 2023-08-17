@@ -44,6 +44,13 @@ This refers to the packages on which depend our project and development. It is a
 
 nodemon (devDependancies) : It restarts the node application / server afresh just after we save our new code.
 
-express
+express --> npm framework for nodeJs. It is a package that helps us with url parsing, handles the routing, etc. It simplifies our web development using NodeJs.
+
+Big things that matter in express :
+
+1> routing
+2> scalability
+
+
 slugify
 browserify

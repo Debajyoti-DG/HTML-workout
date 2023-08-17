@@ -1,0 +1,14 @@
+{
+  "name": "my_express",
+  "version": "1.0.0",
+  "description": "This is a package for node and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Debajyoti DG",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

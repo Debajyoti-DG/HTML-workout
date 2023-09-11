@@ -1,5 +1,5 @@
 //refer to Node.js documentaion for more insights on built in modules
-//Modules 3 tyoes --> built in modules, self made modules, third party modules
+//Modules 3 types --> built in modules, self made modules, third party modules
 
 const { log } = require("console");
 const st = require("fs"); //storing contents (importing) of File System (fs) module in st

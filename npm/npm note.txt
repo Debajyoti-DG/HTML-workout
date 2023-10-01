@@ -23,6 +23,15 @@ When we make a software, we usually start from Version 1.0.0 , and then continue
 
 
 
+---------- PATH CHANGING ---------
+
+cd <name>  --> goes to the mentioned directory
+/ <name>  --> means absolute path or directory
+cd .  --> means the current file 
+cd ../   --> takes us out of the present directory
+
+
+
 ---------- devDependancies ----------
 
 Use npm install <package_name> --save-dev 

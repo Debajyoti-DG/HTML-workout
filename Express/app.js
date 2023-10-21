@@ -3,7 +3,9 @@ const express = require("express");
 const app = express();
 const port = 80; //by default port is 80 for sending and receiving unencrypted webpages
 
-app.use('/static', express.static('static'));  // used for serving static files 
+/* --------------------------------------------
+app.use('/static', express.static('static'));  // used for serving static files
+-----------------------------------------------  */
 
 // app.get('/', (req,res) =>{
 //     res.send("This is home page of app using Express");

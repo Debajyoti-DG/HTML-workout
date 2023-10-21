@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title= title
+        style
+            include ../static/style.css
+    body
+        nav#navbar
+            ul
+                li Home
+                li About
+                li Services
+                li Conatct us
+                li More
+
+        h1 Hello Debajyoti !!!
+        p #{content}
+
+        //semantic tags
+        // header, section, form, table, article, aside, footer
+        section#introSection
+            | Section for introduction 
+        section#sponsorSection
+            | Section for sponsors
+        footer#footer 
+            | Our footer here
+            
+        script
+            include ../static/script.js

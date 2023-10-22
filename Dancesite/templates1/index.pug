@@ -7,17 +7,19 @@ html
     body
         nav#navbar
             ul
+                div#logo 
+                    img(src="/static/logo.jpg" alt="Logo image" class="logoImg")
                 li #[a(href='/') Home]
                 li #[a(href='/') About]
                 li #[a(href='/') Services]
-                li #[a(href='/') Conatct us]
+                li #[a(href='/') Contact us]
                 li #[a(href='/') More]
 
         h1 Hello Debajyoti !!!
         p #{content}
 
-        //semantic tags
-        // header, section, form, table, article, aside, footer
+        //- semantic tags
+        //- header, section, form, table, article, aside, footer
         section#introSection
             | Section for introduction 
         section#sponsorSection

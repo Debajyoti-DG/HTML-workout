@@ -1,0 +1,1 @@
+We can link external links using link in the head tag in HTML or usimng @import url('') function in the style.css

@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, 'templates1')) //set the view directory
 app.get('/', (req,res)=>{
     const con = "Hello boysss, This is Pug Dance site ;) ";
     const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
-    res.status(200).render('index.pug', params);
+    res.status(200).render('home.pug', params);
 });
 
 // START THE SERVER

@@ -8,10 +8,8 @@
 body{
     background-color: rgb(255, 255, 255);
 }
-#navbar{
+ul{
     background-color: lightpink;
-}
-#navbar ul{
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
@@ -49,4 +47,10 @@ h1,h1+p{
 #footer{
     height: 100px;
     background-color: rgb(245, 204, 142);
+}
+
+/* extra */
+
+#extra{
+    color: red;
 }

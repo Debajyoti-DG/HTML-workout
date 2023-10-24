@@ -3,7 +3,18 @@ html
     head
         title Hello - #{title}
         block style
+        style 
+            include ../static/style.css
     body
+        nav#navbar
+        ul
+            div#logo 
+                img(src="/static/logo.jpg" alt="Logo image" class="logoImg")
+            li #[a(href='/') Home]
+            li #[a(href='/') About]
+            li #[a(href='/') Services]
+            li #[a(href='/contact') Contact us]
+            li #[a(href='/') More]
         block content
         footer#footer 
             | Our footer here

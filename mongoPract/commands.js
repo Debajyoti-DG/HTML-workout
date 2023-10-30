@@ -53,3 +53,23 @@ show collections  -->  collection name
 # deleteMany() will delete all the matching occurances of the documents
 
 */
+
+// Updating data from database
+
+/*
+
+show dbs
+use details  -->  database name
+show collections  -->  collection name
+
+1. db.items.updateOne({"name":"ScTm"},{$set: {"job":"Hecking pro max"}})
+
+2. db.items.updateOne({"rating":4.95},{$set: {"rating":4.955}})
+
+3. db.items.updateMany({"rating":4.95},{$set: {"rating":4.955}})
+
+4. db.items.updateMany({"job":"hecking"},{$set: {"rating":4.95555,"job":"oye heckingg"}})
+
+We use $set to set the value to the required attribute.
+
+*/

@@ -4,6 +4,21 @@ const app = express();
 // const fs = require("fs");
 const port = 80;
 
+
+// DataBase mongodb related stuff (mongoose)
+const mongoose = require('mongoose');
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); //details is the name of our database
+  console.log("Connected to MONGO.....");
+  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+}
+main().catch(err => console.log(err));
+
+
+// Define mongoose schema
+
+
 // EXPRESS SPECIFIC STUFF
 app.use('/static', express.static('static'));  // used for serving static files 
 app.use(express.urlencoded({extended : true})); //used for bringing html form data to the backend in express

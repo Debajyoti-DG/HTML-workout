@@ -1,6 +1,7 @@
 const express = require("express");
 const path =  require("path");
 const app = express();
+const bodyparser = require('body-parser');
 // const fs = require("fs");
 const port = 80;
 
@@ -17,6 +18,14 @@ main().catch(err => console.log(err));
 
 
 // Define mongoose schema
+var contactSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    gender: String,
+    email: String
+});
+
+const Contact = mongoose.model('Contact', contactSchema);
 
 
 // EXPRESS SPECIFIC STUFF
@@ -39,6 +48,24 @@ app.get('/contact', (req,res)=>{
     const con = "Hello boysss, This is Pug Dance site ;) ";
     const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
     res.status(200).render('contact.pug', params);
+});
+
+app.post('/contact', (req,res)=>{
+    
+    const con = "Hello boysss, This is Pug Dance site ;) ";
+    const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
+    var mydata = new Contact(req.body);
+    mydata.save().then(()=>{
+        // res.send("These items have been saved to the database !!!");
+        res.status(200).render('contact.pug',params);
+    }).catch(()=>{
+        res.status(400).send("Item could not to be sent to the database");
+    }); 
+
+    // .then() is used to handle the promise because the .save(); function returns a promise. 
+    // In Node, everything is asynchronous 
+    // .catch() is shown only when there is an error while sending the data to the database
+
 });
 
 // START THE SERVER

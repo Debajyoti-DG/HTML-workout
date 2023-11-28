@@ -10,8 +10,8 @@ const port = process.env.PORT;
 const mongoose = require('mongoose');
 
 async function main() {
-  //await mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); //details is the name of our database
-  await mongoose.connect('mongodb://51.20.176.207:27017/contactDance'); //details is the name of our database
+  await mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); //details is the name of our database
+  //await mongoose.connect('mongodb://51.20.176.207:27017/contactDance'); //details is the name of our database
   console.log("Connected to MONGO.....");
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }

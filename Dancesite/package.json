@@ -2,8 +2,8 @@
   "name": "dance-academy",
   "version": "1.0.0",
   "description": "This is a dance website",
-  "main": "app.js",
   "scripts": {
+    "start":"node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Debajyoti DG",

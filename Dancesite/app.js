@@ -3,7 +3,7 @@ const path =  require("path");
 const app = express();
 const bodyparser = require('body-parser');
 // const fs = require("fs");
-const port = 80;
+const port = process.env.PORT;
 
 
 // DataBase mongodb related stuff (mongoose)

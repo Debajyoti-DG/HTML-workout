@@ -9,14 +9,30 @@ const port = process.env.PORT;
 // DataBase mongodb related stuff (mongoose)
 const mongoose = require('mongoose');
 
+
+// Some changes for MongoDB
+
+/*
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); //details is the name of our database
-  //await mongoose.connect('mongodb://51.20.176.207:27017/contactDance'); //details is the name of our database
+  //await mongoose.connect('mongodb://127.0.0.1:27017/contactDance'); //details is the name of our database
+  //await mongoose.connect('mongodb://51.20.176.207:27017/contactDance'); //trial but not successfull as ip address is not static in cyclic.sh
+
   console.log("Connected to MONGO.....");
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 main().catch(err => console.log(err));
 
+*/
+
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.MONGO_URI);
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log("\n\n The error is : \n\n" + error);
+      process.exit(1);
+    }
+  }
 
 // Define mongoose schema
 var contactSchema = new mongoose.Schema({
@@ -69,7 +85,9 @@ app.post('/contact', (req,res)=>{
 
 });
 
-// START THE SERVER
-app.listen(port, ()=>{
+// START THE SERVER --> Minor changes done - earlier it was only app.listen()
+connectDB().then(() => {
+    app.listen(port, ()=>{
     console.log(`Application running succesfully at port : ${port}`);
+    })
 });

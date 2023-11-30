@@ -1,14 +1,16 @@
+require('dotenv').config();
 const express = require("express");
 const path =  require("path");
 const app = express();
 const bodyparser = require('body-parser');
 // const fs = require("fs");
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
+// const port = process.env.PORT;
 
 
 // DataBase mongodb related stuff (mongoose)
 const mongoose = require('mongoose');
-
+mongoose.set('strictQuery',false); // otherwise we get a lot of warnings inside the console which is not ideal
 
 // Some changes for MongoDB
 

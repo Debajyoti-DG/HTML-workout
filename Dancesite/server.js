@@ -1,10 +1,25 @@
-require('dotenv').config();
+// Deploying MongoDb on Cyclic (This was the yt search - 'Raddy' channel) is hectic as we are using the free version and so there is no static ip address to connect
+/*
+
+  1. We signed in to mongodb
+  2. We created a project , database and cluster
+  3. We set name and password
+  4. We set ip address to 0.0.0.0/0 because it enables access to our service cluster from all IPs
+  5. We connect using VS code or whichever we are using - it gives us a connection string for MONGO_URI
+  6. We replace / put our password (step 3) in the previous mentioned string
+  7. After we deploy using cyclic or any other hosting site, in the variables section we put the MONGO_URI and its value
+
+  And now we have successfully connected our MongoDB database through the hosting site to the internet.
+
+*/ 
+
+require('dotenv').config();  // NEW
 const express = require("express");
 const path =  require("path");
 const app = express();
 const bodyparser = require('body-parser');
 // const fs = require("fs");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // NEW
 // const port = process.env.PORT;
 
 
@@ -26,9 +41,10 @@ main().catch(err => console.log(err));
 
 */
 
+// NEW
 const connectDB = async () => {
     try {
-      const conn = await mongoose.connect(process.env.MONGO_URI);
+      const conn = await mongoose.connect(process.env.MONGO_URI); // connecting through mongo uri
       console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
       console.log("\n\n The error is : \n\n" + error);
@@ -87,6 +103,7 @@ app.post('/contact', (req,res)=>{
 
 });
 
+// MODIFIED NEW
 // START THE SERVER --> Minor changes done - earlier it was only app.listen()
 connectDB().then(() => {
     app.listen(port, ()=>{

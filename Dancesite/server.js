@@ -11,6 +11,7 @@
 
   And now we have successfully connected our MongoDB database through the hosting site to the internet.
 
+  Additional info - Name of backend server should be mentined in package.json under "scripts":{"start":"node <backend-name>.js"} if using node 
 */ 
 
 require('dotenv').config();  // NEW
@@ -92,7 +93,7 @@ app.post('/contact', (req,res)=>{
     var mydata = new Contact(req.body);
     mydata.save().then(()=>{
         // res.send("These items have been saved to the database !!!");
-        res.status(200).render('contact.pug',params);
+        res.status(200).render('home.pug',params);
     }).catch(()=>{
         res.status(400).send("Item could not to be sent to the database");
     }); 

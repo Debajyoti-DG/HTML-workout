@@ -83,7 +83,7 @@ app.get('/', (req,res)=>{
 app.get('/about', (req,res)=>{
     const con = "Hello boysss, This is Pug Dance site ;) ";
     const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
-    res.status(200).render('../templates1/hello.html', params);
+    res.status(200).render('templates1/hello.html', params);
 });
 app.get('/contact', (req,res)=>{
     const con = "Hello boysss, This is Pug Dance site ;) ";

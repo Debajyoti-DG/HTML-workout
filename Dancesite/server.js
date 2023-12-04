@@ -80,6 +80,11 @@ app.get('/', (req,res)=>{
     const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
     res.status(200).render('home.pug', params);
 });
+app.get('/about', (req,res)=>{
+    const con = "Hello boysss, This is Pug Dance site ;) ";
+    const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
+    res.status(200).render('hello.html', params);
+});
 app.get('/contact', (req,res)=>{
     const con = "Hello boysss, This is Pug Dance site ;) ";
     const params = {'title' : "Pug Dance", 'content' : con}; //This is an object that we will pass or render
